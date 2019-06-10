@@ -4,7 +4,7 @@ package com.leetcode.question;
  * LeetCode4：Median of Two Sorted Arrays
  * 参考：https://blog.csdn.net/zcsylj/article/details/6802062
  */
-public class ques4 {
+public class LeetCode4 {
     public static void main(String... args){
         /**
          * 测试用例：
