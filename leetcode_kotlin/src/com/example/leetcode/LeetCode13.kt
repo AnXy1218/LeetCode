@@ -46,6 +46,7 @@ fun romanToInt(romanStr:String):Int{
                 "IV","IX","XL","XC","CD","CM"->{
                     result+=romanMap.get(subStr)?:0
                     nearIndex = i
+
                     continue@loop
                 }
             }
