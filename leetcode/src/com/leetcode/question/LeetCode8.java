@@ -25,7 +25,7 @@ public class LeetCode8 {
     }
 
     public static int myAtoi(String str) {
-        if(str == null || str.equals("")){
+        if(str == null || str.trim().equals("")){
             return 0;
         }
 
