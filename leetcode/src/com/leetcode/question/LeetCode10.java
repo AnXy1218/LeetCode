@@ -35,6 +35,9 @@ public class LeetCode10 {
      * @return
      */
     public static boolean isMatch(String s, String p) {
+        if (s == null || s.equals("")){
+            return false;
+        }
         char[] sArr = s.toCharArray();
         char[] pArr = p.toCharArray();
 

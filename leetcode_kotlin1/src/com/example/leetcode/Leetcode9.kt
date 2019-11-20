@@ -16,10 +16,6 @@ fun main(args:Array<String>){
 }
 
 fun isPalindrome(x:Int):Boolean{
-    if (x < 0){
-        //负数不是回文数，例如-121，是121-
-        return false;
-    }
     var x1 = x;
     var target:Int = 0;
     while (x1/10 != 0){
@@ -27,7 +23,6 @@ fun isPalindrome(x:Int):Boolean{
         x1 = x1/10;
     }
     target = target*10+x1;
-    print(target)
     if (x == target){
         return true;
     }
