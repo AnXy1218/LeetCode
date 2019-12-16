@@ -52,6 +52,8 @@ fun threeSum(nums: IntArray): List<List<Int>> {
                     var tempList = listOf(nums[i],nums[j],nums[k])
                     result.add(tempList)
                 }
+                j++
+                k--
             }else if (nums[j] + nums[k] > firstNum){
                 k--
             }else{
@@ -99,7 +101,7 @@ fun threeSum(nums: IntArray): List<List<Int>> {
 //            }
 //        }
     }
-    println(System.currentTimeMillis()-time)
+//    println(System.currentTimeMillis()-time)
     return result
 }
 
