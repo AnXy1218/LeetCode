@@ -13,7 +13,7 @@ import java.util.Set;
 public class LeetCode22 {
 
     public static void main(String... args){
-        System.out.println(generateParenthesis(3));
+        System.out.println(generateParenthesis1(1));
     }
 
     private static List<String> generateParenthesis(int n) {
@@ -36,5 +36,30 @@ public class LeetCode22 {
         }
 
         return new ArrayList<>(set);
+    }
+
+    private static List<String> generateParenthesis1(int n) {
+        List<List<String>> list = new ArrayList<>();
+        if (n == 0){
+            return new ArrayList<>();
+        }
+
+//        list.add();
+        for (int i = 1;i <= n;i++){
+            List<String> tempList = new ArrayList<>();
+            for (int j = 0;j < i;j++){
+                List<String> setP = list.get(j);
+                List<String> setQ = list.get(i-1-j);
+                for (String txtP:setP){
+                    for (String txtQ:setQ){
+                        tempList.add("(" + txtP + ")" + txtQ);
+                    }
+                }
+            }
+
+            list.add(tempList);
+        }
+
+        return list.get(list.size()-1);
     }
 }
