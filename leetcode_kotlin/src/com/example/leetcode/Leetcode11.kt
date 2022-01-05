@@ -10,10 +10,8 @@ fun main(args:Array<String>){
         if (a == 0){
             break;
         }
-        var height:IntArray;
-        height = intArrayOf(54,89,65,74);
-        var leetcode11:Leetcode11;
-        leetcode11 = Leetcode11();
+        var height:IntArray = intArrayOf(54,89,65,74);
+        var leetcode11:Leetcode11 = Leetcode11();
         println("回文数返回结果：" + leetcode11.maxArea(height));
     }
     scanner.close();
